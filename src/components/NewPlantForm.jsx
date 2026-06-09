@@ -11,11 +11,12 @@ function NewPlantForm({ onAddPlant }) {
     const newPlant = {
       name: name,
       image: image,
-      price: parseFloat(price),
-      inStock: true
+      price: Number(price),     // ← MUST be number, not string
+      inStock: true             // ← MUST include this
     };
     
     onAddPlant(newPlant);
+    
     setName('');
     setImage('');
     setPrice('');
