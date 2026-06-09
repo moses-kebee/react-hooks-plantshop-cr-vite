@@ -11,8 +11,8 @@ function NewPlantForm({ onAddPlant }) {
     const newPlant = {
       name: name,
       image: image,
-      price: Number(price),     // ← MUST be number, not string
-      inStock: true             // ← MUST include this
+      price: price    // ← Keep as string, don't convert to Number
+      // ← DO NOT include inStock property
     };
     
     onAddPlant(newPlant);
